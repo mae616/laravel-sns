@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ArticleControllerコントローラでindexメソッドを実行する
+Route::get('/', 'ArticleController@index');
