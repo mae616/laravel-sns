@@ -6,13 +6,13 @@
 
     @guest {{--ログインしていない時--}}
     <li class="nav-item">
-      <a class="nav-link" href="">ユーザー登録</a>
+      <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
     </li>
     @endguest
 
     @guest
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('register') }}">ログイン</a>
+      <a class="nav-link" href="">ログイン</a>
     </li>
     @endguest
 
