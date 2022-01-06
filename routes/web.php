@@ -11,5 +11,8 @@
 |
 */
 
+// 認証関連のルーティングの追加
+Auth::routes();
+
 // ArticleControllerコントローラでindexメソッドを実行する
 Route::get('/', 'ArticleController@index');
