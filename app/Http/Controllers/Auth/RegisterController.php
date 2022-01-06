@@ -49,8 +49,9 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // Googleアカウントを使用しない通常のユーザー登録時に使われる
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'alpha_num', 'min:3', 'max:16', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
