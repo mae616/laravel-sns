@@ -45,8 +45,8 @@ class PasswordResetNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        return $this-mail
-        ->form(config('mail.from.address'), config('mail.from.name'))
+        return $this->mail
+        ->from(config('mail.from.address'), config('mail.from.name'))
         ->to($notifiable->email)
         ->subject('[memo]パスワード再設定')
         ->text('emails.password_reset')
