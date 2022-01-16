@@ -27,7 +27,7 @@ class ArticleRequest extends FormRequest
             'title' => 'required|max:50',
             'body' => 'required|max:500',
             // tagsがJson形式でスペース　/^(?!.*\s).+$\u　と/　/^(?!.*\/).*$/uを含まないか
-            'tags' => 'json|regex:/^(?!.*\s).+$\u|regex:/^(?!.*\/).*$/u'
+            'tags' => 'json|regex:/^(?!.*\s).+$/u|regex:/^(?!.*\/).*$/u'
         ];
     }
 
