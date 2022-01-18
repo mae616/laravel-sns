@@ -14,6 +14,10 @@
 // 認証関連のルーティングの追加
 Auth::routes();
 
+Route::prefix('login')->name('login.')->group(function () {
+  Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('{provider}');
+});
+
 // ArticleControllerコントローラでindexメソッドを実行する
 Route::get('/', 'ArticleController@index')->name('articles.index');
 
